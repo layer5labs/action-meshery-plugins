@@ -29,9 +29,9 @@ The version number of the release tag. Can be used to deploy for example to v1.0
 ## Example usage
 
 ```yaml
-uses: kumarabd/trigger-remote-action@v1.0.0
+uses: layer5labs/action-mmeshery-plugins@master
 with:
-  repo: "kumarabd/random"
+  repo: "layer5labs/random"
   version: "latest"
   name: "publish action"
   token: ${{ secrets.YOUR_TOKEN }}
