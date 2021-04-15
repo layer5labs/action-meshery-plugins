@@ -1,0 +1,37 @@
+name: 'Trigger remote/local Github Action'
+description: 'Trigger a github action from this action'
+
+inputs:
+  name:
+    description: 'name of the action'
+    required: true
+    default: ''
+  repo:
+    description: 'name of the repo that has the action'
+    required: true
+    default: ''
+  token:
+    description: 'repository access token'
+    required: false
+    default: ''
+  version:
+    description: 'version input to the action'
+    required: false
+    default: ''
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.name }}
+    - ${{ inputs.repo }}
+    - ${{ inputs.version }}
+    - ${{ inputs.token }}
+
+outputs:
+  version:
+    description: 'The version of the release or tag'
+
+branding:
+  icon: 'box'
+  color: 'blue'
