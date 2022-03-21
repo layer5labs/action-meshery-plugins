@@ -1,6 +1,5 @@
-# Fetch GH Release Asset from one repository and publish to Another.
-
-This action replicates a Github release from one repository to another. Private repos are supported.
+# GitHub Action for Meshery plugins
+Purpose: Fetch GitHub Release asset(s) from one repository and publish to another repository. Private repositories are supported.
 
 ## Inputs
 
